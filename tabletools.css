@@ -1,0 +1,20 @@
+/* 默认奇数行背景色 */
+tr.even td {
+    background: #ffffff;
+}
+/* 默认偶数行背景色 */
+tr.odd td {
+    background: #ecf6fc;
+}
+/* 默认鼠标滑过行背景色 */
+tr.over td {
+    background: #bcd4ec;
+}
+/* 默认checkbox选中后行背景色 */
+tr.selected td {
+	background: #81a642;
+}
+/* 默认行点击背景色 */
+tr.clicked td {
+	background: #81a6ff;
+}
