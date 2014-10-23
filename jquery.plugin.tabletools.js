@@ -55,8 +55,8 @@ $.TableTools = function(tbody, options) {
     if (options.checkAll) {
         $(options.checkAllBox).click(function() {
             var $boxs = $tbody.find(options.checkbox);
-            var checked = $(this).attr('checked');
-            $boxs.attr('checked', checked);
+            var checked = $(this).prop('checked');
+            $boxs.prop('checked', checked);
             if (options.selected) {
                 if (checked) {
                     $boxs.parents('tr').removeClass(options.clickedTrClass).addClass(options.selectedClass);
