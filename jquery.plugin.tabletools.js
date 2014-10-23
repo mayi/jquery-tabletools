@@ -29,7 +29,7 @@ $.TableTools = function(tbody, options) {
         var $boxs = $tbody.find(options.checkbox);
         $boxs.click(function(event) {
             var $box = $(this);
-            if ($box.attr('checked')) {
+            if ($box.prop('checked')) {
                 $box.parents('tr').removeClass(options.clickedTrClass).addClass(options.selectedClass);
                 // Shift选择的处理
                 if (shiftDown) {
@@ -38,9 +38,9 @@ $.TableTools = function(tbody, options) {
                     } else if (shift2 == -1) {
                         shift2 = $boxs.index($box);
                         if (shift2 >= shift1) {
-                            $boxs.slice(shift1, shift2).attr('checked', true).parents('tr').removeClass(options.clickedTrClass).addClass(options.selectedClass);
+                            $boxs.slice(shift1, shift2).prop('checked', true).parents('tr').removeClass(options.clickedTrClass).addClass(options.selectedClass);
                         } else {
-                            $boxs.slice(shift2, shift1).attr('checked', true).parents('tr').removeClass(options.clickedTrClass).addClass(options.selectedClass);
+                            $boxs.slice(shift2, shift1).prop('checked', true).parents('tr').removeClass(options.clickedTrClass).addClass(options.selectedClass);
                         }
                     }
                 }
@@ -73,9 +73,9 @@ $.TableTools = function(tbody, options) {
             var $clickedTr = $(this);
             if (options.clickedTrChecked) {
                 if ($clickedTr.hasClass(options.selectedClass)) {
-                    $clickedTr.removeClass(options.selectedClass).find(options.checkbox).attr('checked', false);
+                    $clickedTr.removeClass(options.selectedClass).find(options.checkbox).prop('checked', false);
                 } else {
-                    $clickedTr.addClass(options.selectedClass).find(options.checkbox).attr('checked', true);
+                    $clickedTr.addClass(options.selectedClass).find(options.checkbox).prop('checked', true);
                 }
             } else {
                 if (!$clickedTr.hasClass(options.selectedClass)) {
