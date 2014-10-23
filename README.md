@@ -1,3 +1,3 @@
 jquery-tabletools
 =================
-A jquery plugin. Helping you control html table style.
+A jQuery plugin. Helping you control html table style.
